@@ -13,22 +13,23 @@ control 'core-plans-libevent' do
   '
   libevent_pkg = command("#{hab_path} pkg path #{plan_ident}")
   describe libevent_pkg do
-    its('exit_status') { should eq 0 }
     its('stdout') { should_not be_empty }
+    its('stderr') { should be_empty }
+    its('exit_status') { should eq 0 }
   end
   libevent_pkg = libevent_pkg.stdout.strip
 
   describe command("ls -al #{libevent_pkg}/lib/libevent.so") do
-    its('exit_status') { should eq 0 }
     its('stdout') { should_not be_empty }
     its('stdout') { should match /#{libevent_pkg}/ }
     its('stderr') { should be_empty }
+    its('exit_status') { should eq 0 }
   end
 
   describe command("ls -al #{libevent_pkg}/bin/event_rpcgen.py") do
-    its('exit_status') { should eq 0 }
     its('stdout') { should_not be_empty }
     its('stdout') { should match /#{libevent_pkg}/ }
     its('stderr') { should be_empty }
+    its('exit_status') { should eq 0 }
   end
 end
