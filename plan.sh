@@ -1,6 +1,6 @@
 pkg_origin=core
 pkg_name=libevent
-pkg_version=2.0.22
+pkg_version=2.2.12
 pkg_maintainer="The Habitat Maintainers <humans@habitat.sh>"
 pkg_license=('BSD-3-Clause')
 pkg_source=https://github.com/${pkg_name}/${pkg_name}/releases/download/release-${pkg_version}-stable/${pkg_name}-${pkg_version}-stable.tar.gz
