@@ -8,7 +8,7 @@ pkg_upstream_url=https://libevent.org
 pkg_description="The libevent API provides a mechanism to execute a callback function when a specific event occurs \
   on a file descriptor or after a timeout has been reached. Furthermore, libevent also support callbacks due to \
   signals or regular timeouts."
-pkg_shasum=71c2c49f0adadacfdbe6332a372c38cf9c8b7895bb73dabeaa53cdcc1d4e1fa3
+pkg_shasum=8e811aa0ffa0f0ebb1a694ea928cb0f0f3730d2a8ada7d783e4cf589109920aa
 pkg_dirname=${pkg_name}-${pkg_version}-stable
 pkg_deps=(core/glibc)
 pkg_build_deps=(core/cacerts core/gcc core/make)
